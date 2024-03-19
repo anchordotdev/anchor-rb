@@ -1,0 +1,13 @@
+inherit_from: ../../.rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 2.3
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+Rails:
+  Enabled: false
+Rails/RefuteMethods:
+  Enabled: false

@@ -1,0 +1,510 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: "<DIRECTORY_URL>"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Acme::Client v2.0.15 (https://github.com/unixcharles/acme-client)
+      Content-Type:
+      - application/jose+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Fly/442f90d3 (2023-11-07)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HEXNX6Q6JJQRQW1821GBECXQ-den
+      X-Cache-Hits:
+      - '0'
+      X-Cache:
+      - MISS
+      X-Served-By:
+      - cache-den8247-DEN
+      X-Download-Options:
+      - noopen
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Etag:
+      - W/"22f24c4757511b8a5c30da37aa7f09ba"
+      X-Request-Id:
+      - 374f10c9-b004-4328-88a4-42f3d6b835ad
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Date:
+      - Fri, 10 Nov 2023 22:33:40 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Content-Security-Policy:
+      - 'default-src ''self'' https:; font-src ''self'' https: data:; img-src ''self''
+        https: data:; object-src ''none''; script-src ''self'' bam.nr-data.net js-agent.newrelic.com
+        www.googletagmanager.com; style-src ''self'' ''unsafe-inline'' bam.nr-data.net;
+        connect-src ''self'' www.google-analytics.com; base-uri ''self'''
+      X-Xss-Protection:
+      - '0'
+      Vary:
+      - Accept
+      X-Runtime:
+      - '0.004722'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"newNonce":"<DIRECTORY_URL>/new-nonce","newAccount":"<DIRECTORY_URL>/new-account","newOrder":"<DIRECTORY_URL>/new-order","revokeCert":"<DIRECTORY_URL>/revoke-cert","meta":{"website":"https://anchor.dev","externalAccountRequired":true}}'
+  recorded_at: Fri, 10 Nov 2023 22:33:41 GMT
+- request:
+    method: head
+    uri: "<DIRECTORY_URL>/new-nonce"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Acme::Client v2.0.15 (https://github.com/unixcharles/acme-client)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Via:
+      - 1.1 fly.io
+      Server:
+      - Fly/442f90d3 (2023-11-07)
+      X-Frame-Options:
+      - SAMEORIGIN
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Fly-Request-Id:
+      - 01HEXNX6VQHFMX6JE64CW48GBB-den
+      X-Cache-Hits:
+      - '0'
+      X-Served-By:
+      - cache-den8239-DEN
+      Content-Type:
+      - text/html
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - 'default-src ''self'' https:; font-src ''self'' https: data:; img-src ''self''
+        https: data:; object-src ''none''; script-src ''self'' bam.nr-data.net js-agent.newrelic.com
+        www.googletagmanager.com; style-src ''self'' ''unsafe-inline'' bam.nr-data.net;
+        connect-src ''self'' www.google-analytics.com; base-uri ''self'''
+      X-Cache:
+      - MISS
+      X-Xss-Protection:
+      - '0'
+      Date:
+      - Fri, 10 Nov 2023 22:33:40 GMT
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - 5af504c9-4724-4c21-9a65-1451aa16ab6f
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - <<DIRECTORY_URL>>;rel="index"
+      X-Download-Options:
+      - noopen
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Replay-Nonce:
+      - BDGUTHL0NErsorP3PcIL8o0omrSVaddS
+      X-Runtime:
+      - '0.012905'
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 10 Nov 2023 22:33:41 GMT
+- request:
+    method: post
+    uri: "<DIRECTORY_URL>/new-account"
+    body:
+      encoding: UTF-8
+      string: '{"protected":"<PROTECTED>","payload":"eyJjb250YWN0IjpbImRldmVsb3BlckBhbmNob3IuZGV2Il0sInRlcm1zT2ZTZXJ2aWNlQWdyZWVkIjp0cnVlLCJleHRlcm5hbEFjY291bnRCaW5kaW5nIjp7InByb3RlY3RlZCI6ImV5SjBlWEFpT2lKS1YxUWlMQ0poYkdjaU9pSklVekkxTmlJc0ltdHBaQ0k2SW1GaFpWOVRNa3hzZERjMmExZEtSMmxHYmt4eFFXMXlWbWhFUkhSaE5uVlplSEJMUmtWT055MTNNbEUyT1RJdE9DSXNJblZ5YkNJNkltaDBkSEJ6T2k4dllXNWphRzl5TG1SbGRpOWhkWFJ2WTJWeWRDMWpZV0l6WW1NdlpHVjJaV3h2Y0cxbGJuUXZlRFV3T1M5allTOWhZMjFsTDI1bGR5MWhZMk52ZFc1MEluMCIsInBheWxvYWQiOiJleUpqY25ZaU9pSlFMVEkxTmlJc0ltdDBlU0k2SWtWRElpd2llQ0k2SW1GbFRtUXlURTFRYUc5RE5ITlpUa3hVU21RNVMxRktWV2c0ZVVKR1VqTTNPV3BSWjFoTU5uRnFOelFpTENKNUlqb2lhM0pqWW5SSGFGbHBRalZpYjFkamJqSlpTbFI2VmpCMmRHUnFNMEpXUW5wTlkyNXFVSFIzYjIxYWJ5SjkiLCJzaWduYXR1cmUiOiI1Tjc3eGc0Y1dsLWJEbzhtdlREYl9SVlpQMm92dFdkSENlak04ZWE1bDFNIn19","signature":"s_EO93GSmul1kTFC-RpfCpreS9OQZZQOm7Q5w7fcPHLtMDcgaXmTlKZpVDlj5UgHRC9ebLZXqWPPDwhHuywWYA"}'
+    headers:
+      User-Agent:
+      - Acme::Client v2.0.15 (https://github.com/unixcharles/acme-client)
+      Content-Type:
+      - application/jose+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      Connection:
+      - keep-alive
+      X-Download-Options:
+      - noopen
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Frame-Options:
+      - SAMEORIGIN
+      Replay-Nonce:
+      - oixzIuheQz8B0-6h9UvT1V7H6pF0bqSi
+      Etag:
+      - W/"c65eed27da6fe764335c06ace486bd28"
+      X-Content-Type-Options:
+      - nosniff
+      Vary:
+      - Accept
+      X-Cache:
+      - MISS
+      X-Xss-Protection:
+      - '0'
+      X-Served-By:
+      - cache-den8250-DEN
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Fly-Request-Id:
+      - 01HEXNX714B6DM5CHKCCSH9BHD-den
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Security-Policy:
+      - 'default-src ''self'' https:; font-src ''self'' https: data:; img-src ''self''
+        https: data:; object-src ''none''; script-src ''self'' bam.nr-data.net js-agent.newrelic.com
+        www.googletagmanager.com; style-src ''self'' ''unsafe-inline'' bam.nr-data.net;
+        connect-src ''self'' www.google-analytics.com; base-uri ''self'''
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - 7fd077d2-af53-49c7-a2c5-9cbc8991ec1b
+      Location:
+      - "<DIRECTORY_URL>/acct/690B:0661:D182"
+      X-Runtime:
+      - '0.088503'
+      Via:
+      - 1.1 fly.io
+      Server:
+      - Fly/442f90d3 (2023-11-07)
+      X-Cache-Hits:
+      - '0'
+      Date:
+      - Fri, 10 Nov 2023 22:33:41 GMT
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"valid","contact":["developer@anchor.dev"],"orders":"<DIRECTORY_URL>/acct/690B:0661:D182/orders"}'
+  recorded_at: Fri, 10 Nov 2023 22:33:41 GMT
+- request:
+    method: post
+    uri: "<DIRECTORY_URL>/new-order"
+    body:
+      encoding: UTF-8
+      string: '{"protected":"<PROTECTED>","payload":"eyJpZGVudGlmaWVycyI6W3sidHlwZSI6ImRucyIsInZhbHVlIjoiYW5jaG9yLXBraS1yYi10ZXN0aW5nLmxjbC5ob3N0In1dfQ","signature":"2xujHAsZeiXSIzN0gHG8wPZXiXxQMUgLJ2crAF2GgRayFXPXpF7LkjFBMyCoAmETgG-gPpvcvg_0KMsbwmWMlA"}'
+    headers:
+      User-Agent:
+      - Acme::Client v2.0.15 (https://github.com/unixcharles/acme-client)
+      Content-Type:
+      - application/jose+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      Connection:
+      - keep-alive
+      X-Xss-Protection:
+      - '0'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Served-By:
+      - cache-den8254-DEN
+      Replay-Nonce:
+      - 7v_EgW2TNroLS2_tFQmOOrvUoUVHAen2
+      Vary:
+      - Accept
+      X-Frame-Options:
+      - SAMEORIGIN
+      Location:
+      - "<DIRECTORY_URL>/order/433F:7533:C221"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Cache-Hits:
+      - '0'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Date:
+      - Fri, 10 Nov 2023 22:33:41 GMT
+      X-Request-Id:
+      - 808b7911-0a19-42e7-b8f1-a5419b7203d0
+      X-Runtime:
+      - '0.119437'
+      X-Cache:
+      - MISS
+      Fly-Request-Id:
+      - 01HEXNX79C32JXEVXMKRSGAQY2-den
+      Content-Security-Policy:
+      - 'default-src ''self'' https:; font-src ''self'' https: data:; img-src ''self''
+        https: data:; object-src ''none''; script-src ''self'' bam.nr-data.net js-agent.newrelic.com
+        www.googletagmanager.com; style-src ''self'' ''unsafe-inline'' bam.nr-data.net;
+        connect-src ''self'' www.google-analytics.com; base-uri ''self'''
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Server:
+      - Fly/442f90d3 (2023-11-07)
+      X-Download-Options:
+      - noopen
+      Etag:
+      - W/"fbcb33b8849463e59ae48f0ea8f4faf1"
+      Via:
+      - 1.1 fly.io
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"ready","expires":"2023-11-10T23:33:41.995Z","identifiers":[{"type":"dns","value":"anchor-pki-rb-testing.lcl.host"}],"notBefore":null,"notAfter":null,"authorizations":["<DIRECTORY_URL>/authz/D8F0:1AFE:4226"],"finalize":"<DIRECTORY_URL>/order/433F:7533:C221/finalize"}'
+  recorded_at: Fri, 10 Nov 2023 22:33:42 GMT
+- request:
+    method: post
+    uri: "<DIRECTORY_URL>/order/433F:7533:C221/finalize"
+    body:
+      encoding: UTF-8
+      string: '{"protected":"<PROTECTED>","payload":"eyJjc3IiOiJNSUlCSVRDQnh3SUJBakFwTVNjd0pRWURWUVFEREI1aGJtTm9iM0l0Y0d0cExYSmlMWFJsYzNScGJtY3ViR05zTG1odmMzUXdXVEFUQmdjcWhrak9QUUlCQmdncWhrak9QUU1CQndOQ0FBU2YxV2RUTG1UTzZLekU2UTNRNG1NcVVjWkxVOG02VmJGenVxNGFEdzF5clBpRVRwLVBOT0hiN2lWclhGTUU5c0Z4TVYyZDVsU2o2dzFsTnhGTHJvZHBvRHd3T2dZSktvWklodmNOQVFrT01TMHdLekFwQmdOVkhSRUVJakFnZ2g1aGJtTm9iM0l0Y0d0cExYSmlMWFJsYzNScGJtY3ViR05zTG1odmMzUXdDZ1lJS29aSXpqMEVBd0lEU1FBd1JnSWhBUDNEaDdBZXlJc1dLUmdQY0VsSVc2dnVWTTNOT1ZCNGdkdVRXVXhmdzdUNUFpRUFncDFwTVlfQUxsZ0RHVnlKUFZIY0tJYkZLQlUtamxuZGFIS2JvTjFzV1dNIn0","signature":"zLanfdR5zczYaR7KIxTOmp7NwVE-T3P-MLQrDTzz4VeeDM_YLI8XlGaiRJNqLpsDlNgBtKWQCOwzatquP0gXQA"}'
+    headers:
+      User-Agent:
+      - Acme::Client v2.0.15 (https://github.com/unixcharles/acme-client)
+      Content-Type:
+      - application/jose+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Connection:
+      - keep-alive
+      Etag:
+      - W/"0696ec3dba2ff7e58385b33c5fb59288"
+      Replay-Nonce:
+      - iwFJyqrOccXIgXAr3b9--dofwIYK_esx
+      Date:
+      - Fri, 10 Nov 2023 22:33:42 GMT
+      Server:
+      - Fly/442f90d3 (2023-11-07)
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Cache-Hits:
+      - '0'
+      X-Request-Id:
+      - b43e1884-4e9d-410d-a24e-b189ab0758ad
+      X-Runtime:
+      - '0.362345'
+      X-Download-Options:
+      - noopen
+      X-Served-By:
+      - cache-den8229-DEN
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Content-Security-Policy:
+      - 'default-src ''self'' https:; font-src ''self'' https: data:; img-src ''self''
+        https: data:; object-src ''none''; script-src ''self'' bam.nr-data.net js-agent.newrelic.com
+        www.googletagmanager.com; style-src ''self'' ''unsafe-inline'' bam.nr-data.net;
+        connect-src ''self'' www.google-analytics.com; base-uri ''self'''
+      Via:
+      - 1.1 fly.io
+      X-Xss-Protection:
+      - '0'
+      X-Cache:
+      - MISS
+      Vary:
+      - Accept
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Location:
+      - "<DIRECTORY_URL>/order/433F:7533:C221"
+      Fly-Request-Id:
+      - 01HEXNX7HGKRY50S4ZCQTB6YM2-den
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"valid","expires":"2023-11-10T23:33:41.995Z","identifiers":[{"type":"dns","value":"anchor-pki-rb-testing.lcl.host"}],"notBefore":null,"notAfter":null,"authorizations":["<DIRECTORY_URL>/authz/D8F0:1AFE:4226"],"finalize":"<DIRECTORY_URL>/order/433F:7533:C221/finalize","certificate":"<DIRECTORY_URL>/cert/433F:7533:C221"}'
+  recorded_at: Fri, 10 Nov 2023 22:33:42 GMT
+- request:
+    method: post
+    uri: "<DIRECTORY_URL>/cert/433F:7533:C221"
+    body:
+      encoding: UTF-8
+      string: '{"protected":"<PROTECTED>","payload":"","signature":"QezwI4TgbGxC6PLrHQFHXrtSacvCzWqj86WB0amv8794wMeght3NQQybMCiEDmwjTZekcK5PI78wHjcXfoSALg"}'
+    headers:
+      User-Agent:
+      - Acme::Client v2.0.15 (https://github.com/unixcharles/acme-client)
+      Accept:
+      - application/pem-certificate-chain
+      Content-Type:
+      - application/jose+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Connection:
+      - keep-alive
+      Via:
+      - 1.1 fly.io
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Server:
+      - Fly/442f90d3 (2023-11-07)
+      X-Cache:
+      - MISS
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Fly-Request-Id:
+      - 01HEXNX81ZZAER1B5VYJ67NYJS-den
+      X-Runtime:
+      - '0.226621'
+      Content-Disposition:
+      - attachment
+      X-Request-Id:
+      - 891a5133-ef7f-4d26-9f1a-5070fa9d0d01
+      X-Frame-Options:
+      - SAMEORIGIN
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Transfer-Encoding:
+      - binary
+      Date:
+      - Fri, 10 Nov 2023 22:33:42 GMT
+      X-Served-By:
+      - cache-den8247-DEN
+      X-Download-Options:
+      - noopen
+      Replay-Nonce:
+      - GKJiFTC-9uNaR-Mrinh9ed16Aa4uO9rL
+      X-Cache-Hits:
+      - '0'
+      Etag:
+      - W/"a8ac089e1613fb9c2fddbba3f950eb6c"
+      Content-Security-Policy:
+      - 'default-src ''self'' https:; font-src ''self'' https: data:; img-src ''self''
+        https: data:; object-src ''none''; script-src ''self'' bam.nr-data.net js-agent.newrelic.com
+        www.googletagmanager.com; style-src ''self'' ''unsafe-inline'' bam.nr-data.net;
+        connect-src ''self'' www.google-analytics.com; base-uri ''self'''
+      Vary:
+      - Accept
+      Location:
+      - <<DIRECTORY_URL>>;rel="index"
+      Content-Type:
+      - application/pem-certificate-chain
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        -----BEGIN CERTIFICATE-----
+        MIIDHjCCAsSgAwIBAgIMI0+vxsZC0shpn2RSMAoGCCqGSM49BAMCMDsxETAPBgNV
+        BAoTCGF1dG9jZXJ0MSYwJAYDVQQDEx1hbmNob3ItcGtpLXJiLXRlc3RpbmcgLSBT
+        dWJDQTAeFw0yMzExMTAyMjMzNDJaFw0yMzEyMDgyMjMzNDFaMDwxETAPBgNVBAoT
+        CGF1dG9jZXJ0MScwJQYDVQQDEx5hbmNob3ItcGtpLXJiLXRlc3RpbmcubGNsLmhv
+        c3QwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASf1WdTLmTO6KzE6Q3Q4mMqUcZL
+        U8m6VbFzuq4aDw1yrPiETp+PNOHb7iVrXFME9sFxMV2d5lSj6w1lNxFLrodpo4IB
+        qzCCAacwDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAwKQYDVR0OBCIEIB6C
+        Zs9U9TGAoZynfbwGWxQXARk7z1oZ4fk1z6X4o4IfMCsGA1UdIwQkMCKAIKdtyfO5
+        tWuM03dVwSi5St26uuZuPPgbNtbejamHu/t7MCkGA1UdEQQiMCCCHmFuY2hvci1w
+        a2ktcmItdGVzdGluZy5sY2wuaG9zdDB2BggrBgEFBQcBAQRqMGgwZgYIKwYBBQUH
+        MAKGWmh0dHA6Ly9hbmNob3IuZGV2L2F1dG9jZXJ0LWNhYjNiYy9kZXZlbG9wbWVu
+        dC94NTA5L2NhL3N1Yi1jYS00OWQxYTJkM2ZjOWJfYTJiOGRjYTg2NGU1LmRlcjBo
+        BgNVHR8EYTBfMF2gW6BZhldodHRwOi8vYW5jaG9yLmRldi9hdXRvY2VydC1jYWIz
+        YmMvZGV2ZWxvcG1lbnQveDUwOS9jYS9jcmwtNDlkMWEyZDNmYzliX2EyYjhkY2E4
+        NjRlNS5kZXIwIgYJKwYBBAGD22QBBBUwE6IRGA8yMDIzMTEyNDIyMzM0MlowCgYI
+        KoZIzj0EAwIDSAAwRQIgAtwuES+eGTn/OXqKw68REpE8cQrOy18wIcf78h5E3cEC
+        IQC0MNG0saxy2Q6BD/NDvCCuLnWh3PqNbUMXxixQjfew8g==
+        -----END CERTIFICATE-----
+        -----BEGIN CERTIFICATE-----
+        MIIDEjCCArigAwIBAgIMSdGi0/yborjcqGTlMAoGCCqGSM49BAMCMEQxETAPBgNV
+        BAoTCGF1dG9jZXJ0MS8wLQYDVQQDEyZhdXRvY2VydC1jYWIzYmMvZGV2ZWxvcG1l
+        bnQgLSBBbmNob3JDQTAeFw0yMzA4MjEwMDAwMDBaFw0yNDA4MjAyMzU5NTlaMDsx
+        ETAPBgNVBAoTCGF1dG9jZXJ0MSYwJAYDVQQDEx1hbmNob3ItcGtpLXJiLXRlc3Rp
+        bmcgLSBTdWJDQTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABEX4AKxXdQJrJG3G
+        eYY0kSx9yb+Kno2MOcczPl5EiFNLINkkDa9orqNWMjDka/6KEovLqPpd/m28FMK7
+        umi3g9ejggGXMIIBkzAOBgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIB
+        ADApBgNVHQ4EIgQgp23J87m1a4zTd1XBKLlK3bq65m48+Bs21t6NqYe7+3swKwYD
+        VR0jBCQwIoAg+2H4YtGYkD8nFWiZL99IjjJqaHSlR07OtjzQCfQKN88wMAYDVR0e
+        AQH/BCYwJKAiMCCCHmFuY2hvci1wa2ktcmItdGVzdGluZy5sY2wuaG9zdDB5Bggr
+        BgEFBQcBAQRtMGswaQYIKwYBBQUHMAKGXWh0dHA6Ly9hbmNob3IuZGV2L2F1dG9j
+        ZXJ0LWNhYjNiYy9kZXZlbG9wbWVudC94NTA5L2NhL2FuY2hvci1jYS01ZWFkZjll
+        MTFhNGRfOTZmYTAwM2QzMTZlLmRlcjBoBgNVHR8EYTBfMF2gW6BZhldodHRwOi8v
+        YW5jaG9yLmRldi9hdXRvY2VydC1jYWIzYmMvZGV2ZWxvcG1lbnQveDUwOS9jYS9j
+        cmwtNWVhZGY5ZTExYTRkXzk2ZmEwMDNkMzE2ZS5kZXIwCgYIKoZIzj0EAwIDSAAw
+        RQIhAOxeFB/KS6eHbuaiE/q/mGm3lWxCM2aMFJS21lEqJNNeAiAhOdHK4yPzmzcH
+        NA5qTI7HcL/RUL9y78CVPD5FgiDdXA==
+        -----END CERTIFICATE-----
+        -----BEGIN CERTIFICATE-----
+        MIICRzCCAe2gAwIBAgIMXq354RpNlvoAPTFuMAoGCCqGSM49BAMCMEQxETAPBgNV
+        BAoTCGF1dG9jZXJ0MS8wLQYDVQQDEyZhdXRvY2VydC1jYWIzYmMvZGV2ZWxvcG1l
+        bnQgLSBBbmNob3JDQTAeFw0yMzA4MjEwMDAwMDBaFw0yNTA4MjAyMzU5NTlaMEQx
+        ETAPBgNVBAoTCGF1dG9jZXJ0MS8wLQYDVQQDEyZhdXRvY2VydC1jYWIzYmMvZGV2
+        ZWxvcG1lbnQgLSBBbmNob3JDQTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABPuO
+        55cE+r01Bk31kalBSOdp9WMR+NPNBsa1ZuRNH4TQwEd1J/gU69cZ/TGabzR5VMna
+        IuepuxkkGOaCJvU79eKjgcQwgcEwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQI
+        MAYBAf8CAQEwKQYDVR0OBCIEIPth+GLRmJA/JxVomS/fSI4yamh0pUdOzrY80An0
+        CjfPMCsGA1UdIwQkMCKAIPth+GLRmJA/JxVomS/fSI4yamh0pUdOzrY80An0CjfP
+        MEMGA1UdHgEB/wQ5MDegNTALggkubGNsLmhvc3QwC4IJLmludGVybmFsMAaCBC5s
+        YW4wCIIGLmxvY2FsMAeCBS50ZXN0MAoGCCqGSM49BAMCA0gAMEUCIQDxIU4ygHP8
+        IQEk6Qlf9Nuayahl8MkytQGu3l4g0LyaJwIgFpb8tmzjIvQwH1QNeZA74EoH3GaN
+        mUBV9+ucK7lIwjQ=
+        -----END CERTIFICATE-----
+  recorded_at: Fri, 10 Nov 2023 22:33:42 GMT
+recorded_with: VCR 6.1.0
